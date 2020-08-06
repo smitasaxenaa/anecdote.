@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/dashboard.css' %}">
+<br>
+<img class="img-responsive" src="{% static '1.png' %}">
+    <h1 id="intro">A sharing community from students, for students</h1>
+    <p class="intropara"> Interviews can be messy. The days filled with anxiety and nervousness when the first interview day comes closer, are a part of everyone's college life. So do yourself a favour and take a look at this community of students where students just like you, come together to share their experiences. Who knows, tomorrow it will be you who's sharing your first time jitters!</p>
+    <div>
+      {% if user.is_authenticated %}
+
+      <button type="submit" class="button1">Write your experience</button>
+
+    <form action="{% url 'userposts_list_view' %}"><button type="submit" class="button2">Read experiences</button>
+    </form>
+    {% else %}
+    <form action="{% url 'login' %}">
+    <button type="submit" class="button1">Write your experience</button>
+    </form>
+  <form action="{% url 'login' %}"><button type="submit" class="button2">Read experiences</button>
+  </form>
+  {% endif %}
+    </div>
+{% endblock %}

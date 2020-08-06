@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'users/nav.css' %}">
+
+<br>
+
+<div class="container">
+<div class="col-lg-9 offset-lg-1">
+  <h1>Experiences</h1>
+  <hr>
+      {% for post in allposts %}
+      <h3><a style="color:black" href='/blog/posts/{{ post.url }}/'>{{ post.title }}</a></h3>
+      <small>
+        {{post.name}} |&nbsp;
+        {{ post.created_on.date }} |&nbsp;
+    </small>
+    <p style="color:#696969">{{ post.content | slice:":400" }}...</p>
+    {% endfor %}
+    <a href="/dashboard/"> Back to dashboard</a>
+</div>
+</div>
+{% endblock %}

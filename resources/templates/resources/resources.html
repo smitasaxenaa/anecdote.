@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'resources/res.css' %}">
+  <h1 class="field"> WHAT'S YOUR INTEREST?</h1>
+
+<div class="container-fluid bg-3">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 mt-3">
+            <div class="hover hover-1 text-white rounded"><a class="link" href="{% url 'sde' %}"><img src="{% static 'resources/code.jfif' %}"></a>
+            <div class="hover-overlay"></div>
+            <div class="hover-1-content px-5 py-4">
+            <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Software </span>Development</h3>
+      <!--     <p class="hover-1-description font-weight-light mb-0">Adhesives and Tile Grouting expert from Pidilite.</p> -->
+            </div>
+            </div>
+            </div>
+            <div class="col-lg-4 mt-3">
+            <div class="hover hover-1 text-white rounded"> <a class="link" href="{% url 'businessanalyst' %}"><img src="{% static 'resources/quantt.jpg' %}"></a>
+            <div class="hover-overlay"></div>
+            <div class="hover-1-content px-5 py-4">
+            <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Quant/Business </span>Analyst</h3>
+            <!--   <p class="hover-1-description font-weight-light mb-0">a brief inquiry into the Assamese language.</p> -->
+            </div>
+            </div>
+            </div>
+            <div class="col-lg-4 mt-3">
+            <div class="hover hover-1 text-white rounded"> <a class="link" href="#"><img src="{% static 'resources/data.jpg' %}"></a>
+            <div class="hover-overlay"></div>
+            <div class="hover-1-content px-5 py-4">
+            <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Data </span>Science</h3>
+          <!--  <p class="hover-1-description font-weight-light mb-0">The ultimate college companion.</p> -->
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-4 mt-3">
+              <div class="hover hover-1 text-white rounded"><a class="link" href="#"><img src="{% static 'resources/ce.jfif' %}"></a>
+              <div class="hover-overlay"></div>
+              <div class="hover-1-content px-5 py-4">
+              <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Electrical </span>Core</h3>
+        <!--     <p class="hover-1-description font-weight-light mb-0">Adhesives and Tile Grouting expert from Pidilite.</p> -->
+              </div>
+              </div>
+              </div>
+              <div class="col-lg-4 mt-3">
+              <div class="hover hover-1 text-white rounded"> <a class="link" href="#"><img src="{% static 'resources/pm.png' %}"></a>
+              <div class="hover-overlay"></div>
+              <div class="hover-1-content px-5 py-4">
+              <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Product </span>Management</h3>
+              <!--   <p class="hover-1-description font-weight-light mb-0">a brief inquiry into the Assamese language.</p> -->
+              </div>
+              </div>
+              </div>
+              <div class="col-lg-4 mt-3">
+              <div class="hover hover-1 text-white rounded"> <a class="link" href="#"><img src="{% static 'resources/c.jpg' %}"></a>
+              <div class="hover-overlay"></div>
+              <div class="hover-1-content px-5 py-4">
+              <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Consulting and </span>Analystics</h3>
+            <!--  <p class="hover-1-description font-weight-light mb-0">The ultimate college companion.</p> -->
+              </div>
+              </div>
+              </div>
+              </div>
+</div>
+
+{% endblock %}

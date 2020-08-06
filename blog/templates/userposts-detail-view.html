@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'users/nav.css' %}">
+
+<br>
+
+<div class="col-md-10 offset-md-1">
+
+<h1>{{ post.title }}</h1>
+<small>
+        {{ post.name }} |&nbsp;
+        {{ post.created_on.date }} |&nbsp;
+        {{ post.category }}
+</small>
+<p>{{ post.content | linebreaks }}</p>
+<h5>Leave a comment:</h5>
+<form action="/blog/posts/{{ post.url }}/" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.author }}
+        </div>
+        <div class="form-group">
+            {{ form.body }}
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br>
+    <h7>Comments:</h7>
+    {% for comment in comments %}
+    <p>
+        On {{comment.created_on.date }}&nbsp;
+        <b>{{ comment.author }}</b> wrote:
+    </p>
+    <p>{{ comment.body }}</p>
+    <hr>
+    {% endfor %}
+    <br><br>
+    Go back to <a href="/blog/posts/">Experiences</a><br><br>
+</div>
+{% endblock %}

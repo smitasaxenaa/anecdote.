@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/nav.css' %}">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto navbar-right">
+          <li class="nav-item active"><a class="nav-link" href="{% url 'dashboard' %}">Home<span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'resources' %}">Resources</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'userposts_list_view' %}">Blogs</a></li>
+          <li class="nav-item"> <a class="nav-link" href="#">Mentor groups</a></li>
+          <li class="nav-item"> <a class="nav-link" href="#">About</a></li>
+          </ul>
+        </div>
+        </div>
+</nav>
+
+{% block content %}
+
+{% endblock %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/footer.css' %}">
+<!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify"><B>Anecdote.</B> is your one stop platform for internships<br> and placements preperation. Find everything from<br> resources, to preparation tips from seniors,<br> to mentor groups and resume tips all at one place. </p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Fields</h6>
+          <ul class="footer-links">
+            <li><a href="http://scanfcode.com/category/c-language/">Software Development</a></li>
+            <li><a href="http://scanfcode.com/category/front-end-development/">Quant/Business Analyst</a></li>
+            <li><a href="http://scanfcode.com/category/back-end-development/">Data Science</a></li>
+            <li><a href="http://scanfcode.com/category/java-programming-language/">Electrical core</a></li>
+            <li><a href="http://scanfcode.com/category/android/">Product Management</a></li>
+            <li><a href="http://scanfcode.com/category/templates/">Consulting and Analytics</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="http://scanfcode.com/about/">About Us</a></li>
+            <li><a href="http://scanfcode.com/privacy-policy/">Blogs</a></li>
+            <li><a href="{% url 'resources' %}">Resources</a></li>
+            <li><a href="http://scanfcode.com/privacy-policy/">Mentor Groups</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Made with love from scratch &copy;
+       <a href="#">Anecdote.</a>
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
